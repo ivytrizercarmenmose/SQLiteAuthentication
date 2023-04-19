@@ -1,6 +1,7 @@
 package com.example.authenticationsqlite_carmen
 
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -53,8 +54,11 @@ class MainActivity : AppCompatActivity() {
 
                 //Toast a success message
                 Toast.makeText(this, " USER  SAVED SUCCESSFULLY", Toast.LENGTH_SHORT).show()
-            }
 
+            // navigating user from one activity to another
+                var gotologin = Intent(this, loginActivity::class.java)
+                startActivity(gotologin)
+            }
 
         }
     }
